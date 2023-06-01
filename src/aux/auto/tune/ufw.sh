@@ -9,6 +9,8 @@ log=~/full.log ; \
 list=(`cat ~/srvr/data/$HOSTNAME/use-ports.txt`) ; \
 # make sure ufw is off
 ufw disable >> $log ; \
+# allow ssh port
+ufw allow 22/tcp comment "ssh" >> $log ; \
 # grab each port in list
 for port in ${list[@]}
 do
