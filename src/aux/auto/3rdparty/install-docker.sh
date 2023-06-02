@@ -6,7 +6,7 @@ smartlog=~/smrt.log ; \
 # load complete output log filename
 log=~/full.log ; \
 # list pkgs to install
-pkgs="docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin" ; \
+pkgs="docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose docker-compose-plugin" ; \
 install -m 0755 -d /etc/apt/keyrings >> $log ; \
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg >> $log ; \
 chmod a+r /etc/apt/keyrings/docker.gpg >> $log ; \
