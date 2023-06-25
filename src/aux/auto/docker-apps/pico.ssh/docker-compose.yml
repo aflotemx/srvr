@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  openssh-server:
+    image: lscr.io/linuxserver/openssh-server:latest
+    container_name: pico
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SUDO_ACCESS=false
+      - PASSWORD_ACCESS=false
+      - USER_NAME=martin
+    volumes:
+      - /root/cfg-repo/pico/config:/config
+      - /root/repo/pico:/repo/pico
+    ports:
+      - 1312:2222
+    restart: unless-stopped

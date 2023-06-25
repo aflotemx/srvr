@@ -6,7 +6,7 @@ smartlog=~/smrt.log ; \
 # load complete output log filename
 log=~/full.log ; \
 # prepare list
-list=(`cat ~/srvr/data/autostart-services-list.txt`) ; \
+list=(`cat ~/srvr/data/$HOSTNAME/autostart-list.txt`) ; \
 # loop services in list
 for service in ${list[@]}
 do 
