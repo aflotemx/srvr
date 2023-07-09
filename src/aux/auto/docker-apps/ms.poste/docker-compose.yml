@@ -1,0 +1,17 @@
+---
+version: "3"
+services:
+  poste:
+    image: analogic/poste.io
+    container_name: ms.poste
+    hostname: poste
+    environment:
+      - HTTP_PORT=1325
+      - HTTPS_PORT=1326
+      - TZ=America/Chicago
+      - DISABLE_CLAMAV=TRUE
+      - DISABLE_RSPAMD=TRUE
+    volumes:
+      - /root/poste/data:/data
+    network_mode: "host"
+    restart: unless-stopped

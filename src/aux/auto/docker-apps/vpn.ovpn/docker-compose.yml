@@ -1,0 +1,14 @@
+---
+version: "2.1"
+services:
+  openvpn:
+    image: kylemanna/openvpn
+    container_name: vpn.ovpn
+    hostname: ovpn
+    volumes:
+      - /root/vpn/etc/openvpn:/etc/openvpn
+    ports:
+      - 443:1194
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
