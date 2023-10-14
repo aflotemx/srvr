@@ -1,2 +1,1 @@
-migrate docker-apps form docker-cli to docker-compose
 create a script to run every docker app in list

@@ -3,8 +3,8 @@ version: "3"
 services:
   poste:
     image: analogic/poste.io
-    container_name: ms.poste
-    hostname: poste
+    container_name: poste
+    hostname: ms.aflotemx.com
     environment:
       - HTTP_PORT=1325
       - HTTPS_PORT=1326
@@ -12,6 +12,9 @@ services:
       - DISABLE_CLAMAV=TRUE
       - DISABLE_RSPAMD=TRUE
     volumes:
-      - /root/poste/data:/data
+      - poste:/data
     network_mode: "host"
     restart: unless-stopped
+volumes:
+  poste:
+    external: true

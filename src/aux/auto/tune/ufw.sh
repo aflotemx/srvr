@@ -22,6 +22,6 @@ ufw default allow outgoing >> $smartlog ; \
 # block all ports for incoming traffic by default
 ufw default deny incoming >> $smartlog ; \
 # enable ufw without need of interaction
-echo -e "y\n" | ufw enable >> $smartlog ; \
+ufw --force enable >> $smartlog ; \
 # report status
 ufw status >> $smartlog

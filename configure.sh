@@ -12,6 +12,4 @@ bash ~/srvr/src/aux/auto/tune/ssh-daemon.sc ; \
 # install all needed software
 bash ~/srvr/src/major/get-software.sh ; \
 # run reliability and security basic configs
-bash ~/srvr/src/major/tune.sh ; \
-# donwload data
-bash ~/srvr/src/major/download.sh
+bash ~/srvr/src/major/tune.sh

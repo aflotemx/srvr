@@ -3,12 +3,15 @@ version: "2.1"
 services:
   openvpn:
     image: kylemanna/openvpn
-    container_name: vpn.ovpn
-    hostname: ovpn
+    container_name: openvpn
+    hostname: vpn.aflotemx.com
     volumes:
-      - /root/vpn/etc/openvpn:/etc/openvpn
+      - openvpn:/etc/openvpn
     ports:
       - 443:1194
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+volumes:
+  openvpn:
+    external: true

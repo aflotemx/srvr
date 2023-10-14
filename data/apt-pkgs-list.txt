@@ -1,1 +1,1 @@
- htop locales-all curl git wget unzip tomb ca-certificates gnupg ufw 
+ net-tools dnsutils htop locales-all curl wget unzip ca-certificates gnupg ufw

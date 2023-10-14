@@ -3,8 +3,8 @@ version: "2.1"
 services:
   openssh-server:
     image: lscr.io/linuxserver/openssh-server:latest
-    container_name: pico
-    hostname: pico
+    container_name: git
+    hostname: git
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,8 +13,10 @@ services:
       - PASSWORD_ACCESS=false
       - USER_NAME=martin
     volumes:
-      - /root/repo/pico/config:/config
-      - /root/repo/pico:/repo/pico
+      - repo:/repo
     ports:
-      - 1312:2222
+      - 2222:2222
     restart: unless-stopped
+volumes:
+  repo:
+    external: true
