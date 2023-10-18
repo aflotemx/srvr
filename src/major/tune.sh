@@ -2,7 +2,7 @@
 # name script
 script="tune" ; \
 # loop through tune scripts
-for script in ~/srvr/src/aux/auto/tune/*.sh
+for script in ~/srvr/src/auto/tune/*.sh
 do
 # execute script
 bash $script

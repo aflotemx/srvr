@@ -1,0 +1,10 @@
+---
+version: "3"
+services:
+  captain:
+    image: captain
+    container_name: captain
+    hostname: captain
+    ports:
+      - 3000:3000
+    restart: unless-stopped
