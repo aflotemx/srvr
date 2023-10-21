@@ -1,1 +1,0 @@
-create a script to run every docker app in list

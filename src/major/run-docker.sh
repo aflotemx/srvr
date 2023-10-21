@@ -10,6 +10,7 @@ list=(`find ~/srvr/data/$HOSTNAME/docker/* -type d`) >> $log && \
 for app in ${list[@]}
 do
 cd $app
+bash *.sh >> $log && \
 docker-compose up -d >> $log
 done
 docker ps -a >> $smartlog
