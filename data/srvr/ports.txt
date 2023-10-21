@@ -1,3 +1,4 @@
 25,110,143,465,587,993,995,1325,1326/tcp comment "poste"
 80,443/tcp comment "http(s)"
 8080/tcp comment "calibre-server"
+2222/tcp comment "git"
