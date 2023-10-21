@@ -13,3 +13,10 @@ do
 # run script
 bash $script
 done
+# loop through custom 3party install scripts
+for script in ~/srvr/data/3rdparty/*.sh
+do
+# run script
+bash $script
+done
+
