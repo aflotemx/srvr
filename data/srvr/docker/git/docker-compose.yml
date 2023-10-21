@@ -1,0 +1,22 @@
+---
+version: "2.1"
+services:
+  openssh-server:
+    image: lscr.io/linuxserver/openssh-server:latest
+    container_name: git
+    hostname: git
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SUDO_ACCESS=false
+      - PASSWORD_ACCESS=false
+      - USER_NAME=martin
+    volumes:
+      - repo:/repo
+    ports:
+      - 2222:2222
+    restart: unless-stopped
+volumes:
+  repo:
+    external: true
